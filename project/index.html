@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Registration Form in HTML CSS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section class="container">
+    <header>Registration Form</header>
+    <form action="#" class="form">
+      <div class="input-box">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter full name" id="name" onblur="checkName();" required />
+        <p class="error" id="nameError"></p>
+      </div>
+
+      <div class="input-box">
+        <label>Email Address</label>
+        <input type="text" placeholder="Enter email address" id="email" onblur="checkEmail()" required />
+        <p class="error" id="emailError"></p>
+      </div>
+
+      <div class="input-box">
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password" id="password" onblur="checkPassword()" required />
+        <p class="error" id="passwordError"></p>
+      </div>
+
+      <div class="input-box">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Re-Enter Password" id="confirmPassword" onblur="checkConfirmPassword()" required />
+        <p class="error" id="confirmPasswordError"></p>
+      </div>
+
+      <div class="column">
+        <div class="input-box">
+          <label>Phone Number</label>
+          <input type="text" placeholder="Enter phone number" id="number" onblur="checkNumber()" />
+          <p class="error" id="numberError"></p>
+        </div>
+
+        <div class="input-box">
+          <label>Birth Date</label>
+          <input type="date" placeholder="Enter birth date" id="birth" onblur="checkBirth()" required />
+          <p class="error" id="birthError"></p>
+        </div>
+      </div>
+
+      <div class="gender-box">
+        <h3>Gender</h3>
+        <div class="gender-option">
+          <div class="gender">
+            <input type="radio" id="check-male" name="gender" id="male" onblur="checkMale()" checked />
+            <p class="error" id="maleError"></p>
+            <label for="check-male">male</label>
+          </div>
+
+          <div class="gender">
+            <input type="radio" id="check-female" name="gender" onblur="checkFemale()" id="Female" />
+            <p class="error" id="femaleError"></p>
+            <label for="check-female">Female</label>
+          </div>
+
+          <div class="gender">
+            <input type="radio" id="check-other" name="gender" onblur="checkOther()" id="other" />
+            <p class="error" id="otherError"></p>
+            <label for="check-other">prefer not to say</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-box address">
+        <label>Address</label>
+        <input type="text" placeholder="Flat no. / Street" id="flat" onblur="checkFlat()" required />
+        <p class="error" id="flatError"></p>
+        <input type="text" placeholder="District" id="district" onblur="CheckDistrict()" required />
+        <p class="error" id="districtError"></p>
+        <div class="column">
+          <div class="select-box">
+            <select id="country" onblur="checkCountry()" required>
+              <p class="error" id="countryError"></p>
+              <option value="">America</option>
+              <option value="">Japan</option>
+              <option value="">India</option>
+              <option value="">Nepal</option>
+              <option value="">Sri Lanka</option>
+            </select>
+          </div>
+          <input type="text" placeholder="Enter your city" id="city" onblur="checkCity()" required />
+          <p class="error" id="cityError"></p>
+        </div>
+
+        <div class="column">
+          <input type="text" placeholder="Enter your region" id="region" onblur="checkRegion()" required />
+          <p class="error" id="regionError"></p>
+          <input type="number" placeholder="Enter pin code" id="code" onblur="checkCode()" required />
+          <p class="error" id="codeError"></p>
+        </div>
+      </div>
+
+      <button>Submit</button>
+    </form>
+  </section>
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="script.js"></script>
